@@ -1,3 +1,17 @@
 [
-  
+  // Custom commands
+  { "keys": ["super+alt+w"], "command": "close_other_tabs" },
+
+  // Embedded commands
+  { "keys": ["ctrl+shift+super+r"], "command": "reveal_in_side_bar"},
+
+  // Remap
+  { "keys": ["ctrl+shift+space"], "command": "auto_complete" },
+  { "keys": ["ctrl+shift+space"], "command": "replace_completion_with_auto_complete", "context":
+    [
+      { "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
+      { "key": "auto_complete_visible", "operator": "equal", "operand": false },
+      { "key": "setting.tab_completion", "operator": "equal", "operand": true }
+    ]
+  },
 ]
