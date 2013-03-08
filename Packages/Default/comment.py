@@ -33,7 +33,7 @@ def build_comment_data(view, pt):
     block_comments = []
 
     # transform the dict into a single array of valid comments
-    suffixes = [""] + ["_" + str(i) for i in xrange(1, 10)]
+    suffixes = [""] + ["_" + str(i) for i in range(1, 10)]
     for suffix in suffixes:
         start = all_vars.setdefault("TM_COMMENT_START" + suffix)
         end = all_vars.setdefault("TM_COMMENT_END" + suffix)
@@ -107,8 +107,8 @@ class ToggleCommentCommand(sublime_plugin.TextCommand):
         start_positions = [advance_to_first_non_white_space_on_line(view, r.begin())
             for r in view.lines(region)]
 
-        start_positions = filter(lambda p: has_non_white_space_on_line(view, p),
-            start_positions)
+        start_positions = list(filter(lambda p: has_non_white_space_on_line(view, p),
+            start_positions))
 
         if len(start_positions) == 0:
             return False
@@ -148,8 +148,8 @@ class ToggleCommentCommand(sublime_plugin.TextCommand):
 
         # Remove any blank lines from consideration, they make getting the
         # comment start markers to line up challenging
-        non_empty_start_positions = filter(lambda p: has_non_white_space_on_line(view, p),
-            start_positions)
+        non_empty_start_positions = list(filter(lambda p: has_non_white_space_on_line(view, p),
+            start_positions))
 
         # If all the lines are blank however, just comment away
         if len(non_empty_start_positions) != 0:
