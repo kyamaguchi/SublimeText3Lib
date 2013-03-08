@@ -3,7 +3,7 @@ import sublime_plugin, sublime
 class KillRing:
     def __init__(self):
         self.limit = 16
-        self.buffer = [None for i in xrange(self.limit)]
+        self.buffer = [None for i in range(self.limit)]
         self.head = 0
         self.len = 0
         self.kill_points = []
@@ -74,7 +74,7 @@ class YankCommand(sublime_plugin.TextCommand):
         if len(regions) > 1 and len(regions) == len(lines):
             # insert one line from the top of the kill ring at each
             # corresponding selection
-            for i in xrange(len(regions)):
+            for i in range(len(regions)):
                 s = regions[i]
                 line = lines[i]
                 num = self.view.insert(edit, s.begin(), line)

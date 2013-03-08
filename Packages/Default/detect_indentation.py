@@ -30,7 +30,7 @@ class DetectIndentationCommand(sublime_plugin.TextCommand):
 
         if indented_lines >= threshold:
             if len(spaces_list) > starts_with_tab:
-                for indent in xrange(8, 1, -1):
+                for indent in range(8, 1, -1):
                     same_indent = filter(lambda x: x % indent == 0, spaces_list)
                     if len(same_indent) >= evidence[indent] * len(spaces_list):
                         if show_message:
@@ -40,7 +40,7 @@ class DetectIndentationCommand(sublime_plugin.TextCommand):
                         self.view.settings().set('tab_size', indent)
                         return
 
-                for indent in xrange(8, 1, -2):
+                for indent in range(8, 1, -2):
                     same_indent = filter(lambda x: x % indent == 0 or x % indent == 1, spaces_list)
                     if len(same_indent) >= evidence[indent] * len(spaces_list):
                         if show_message:

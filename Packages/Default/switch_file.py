@@ -26,13 +26,13 @@ class SwitchFileCommand(sublime_plugin.WindowCommand):
         if ext != "":
             ext = ext[1:]
 
-            for i in xrange(0, len(extensions)):
+            for i in range(0, len(extensions)):
                 if compare_file_names(extensions[i], ext):
                     start = i + 1
                     count -= 1
                     break
 
-        for i in xrange(0, count):
+        for i in range(0, count):
             idx = (start + i) % len(extensions)
 
             new_path = base + '.' + extensions[idx]

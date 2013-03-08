@@ -22,7 +22,7 @@ def normed_indentation_pt(view, sel, non_space=False):
     pos = 0
     ln = view.line(sel)
 
-    for pt in xrange(ln.begin(), ln.end() if non_space else sel.begin()):
+    for pt in range(ln.begin(), ln.end() if non_space else sel.begin()):
         ch = view.substr(pt)
 
         if ch == '\t':
@@ -62,7 +62,7 @@ def pt_from_line_and_normed_pt(view, (ln, pt)):
 
     pos = 0
 
-    for i in xrange(start_pt, start_pt + pt):
+    for i in range(start_pt, start_pt + pt):
         ch = view.substr(i)
 
         if ch == '\t':

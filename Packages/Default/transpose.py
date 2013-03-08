@@ -46,7 +46,7 @@ def transpose_selections(edit, view):
                 trans = [ view.word(next), word_sel ]
             else:
                 if wb == 0: continue
-                for pt in xrange(wb-1, -1, -1):
+                for pt in range(wb-1, -1, -1):
                     if re.match('\w', view.substr(pt)): break
                 trans = [ word_sel, view.word(pt) ]
         else:

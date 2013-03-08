@@ -84,11 +84,11 @@ def unique_selection(v):
 def shrink_wrap_region( view, region ):
     a, b = region.begin(), region.end()
 
-    for a in xrange(a, b):
+    for a in range(a, b):
         if not view.substr(a).isspace():
             break
 
-    for b in xrange(b-1, a, -1):
+    for b in range(b-1, a, -1):
         if not view.substr(b).isspace():
             b += 1
             break
