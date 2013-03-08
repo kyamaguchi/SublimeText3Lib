@@ -1,5 +1,4 @@
 import sublime, sublime_plugin
-import itertools
 
 def advance_to_first_non_white_space_on_line(view, pt):
     while True:
@@ -34,7 +33,7 @@ def build_comment_data(view, pt):
     block_comments = []
 
     # transform the dict into a single array of valid comments
-    suffixes = [""] + ["_" + str(i) for i in range(1, 10)]
+    suffixes = [""] + ["_" + str(i) for i in xrange(1, 10)]
     for suffix in suffixes:
         start = all_vars.setdefault("TM_COMMENT_START" + suffix)
         end = all_vars.setdefault("TM_COMMENT_END" + suffix)
@@ -111,9 +110,7 @@ class ToggleCommentCommand(sublime_plugin.TextCommand):
         start_positions = filter(lambda p: has_non_white_space_on_line(view, p),
             start_positions)
 
-        start_positions, start_positions_clone = itertools.tee(start_positions)
-        if sum(1 for _ in start_positions_clone) == 0:
-        # if len(start_positions) == 0:
+        if len(start_positions) == 0:
             return False
 
         for pos in start_positions:
@@ -155,8 +152,7 @@ class ToggleCommentCommand(sublime_plugin.TextCommand):
             start_positions)
 
         # If all the lines are blank however, just comment away
-        non_empty_start_positions, non_empty_start_positions_clone = itertools.tee(non_empty_start_positions)
-        if sum(1 for _ in non_empty_start_positions_clone) != 0:
+        if len(non_empty_start_positions) != 0:
             start_positions = non_empty_start_positions
 
         if not disable_indent:
@@ -164,14 +160,13 @@ class ToggleCommentCommand(sublime_plugin.TextCommand):
 
             # This won't work well with mixed spaces and tabs, but really,
             # don't do that!
-            start_positions, start_positions_clone = itertools.tee(start_positions)
             for pos in start_positions:
                 indent = advance_to_first_non_white_space_on_line(view, pos) - pos
                 if min_indent == None or indent < min_indent:
                     min_indent = indent
 
             if min_indent != None and min_indent > 0:
-                start_positions = [r + min_indent for r in start_positions_clone]
+                start_positions = [r + min_indent for r in start_positions]
 
         for pos in start_positions:
             view.insert(edit, pos, start)
