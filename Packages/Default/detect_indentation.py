@@ -31,7 +31,7 @@ class DetectIndentationCommand(sublime_plugin.TextCommand):
         if indented_lines >= threshold:
             if len(spaces_list) > starts_with_tab:
                 for indent in range(8, 1, -1):
-                    same_indent = filter(lambda x: x % indent == 0, spaces_list)
+                    same_indent = list(filter(lambda x: x % indent == 0, spaces_list))
                     if len(same_indent) >= evidence[indent] * len(spaces_list):
                         if show_message:
                             sublime.status_message("Detect Indentation: Setting indentation to "
@@ -41,7 +41,7 @@ class DetectIndentationCommand(sublime_plugin.TextCommand):
                         return
 
                 for indent in range(8, 1, -2):
-                    same_indent = filter(lambda x: x % indent == 0 or x % indent == 1, spaces_list)
+                    same_indent = list(filter(lambda x: x % indent == 0 or x % indent == 1, spaces_list))
                     if len(same_indent) >= evidence[indent] * len(spaces_list):
                         if show_message:
                             sublime.status_message("Detect Indentation: Setting indentation to "
