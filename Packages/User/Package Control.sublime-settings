@@ -3,6 +3,7 @@
 	[
 		"CoffeeScript",
 		"FileDiffs",
-		"Sass"
+		"Sass",
+		"SideBarEnhancements"
 	]
 }
