@@ -1,8 +1,10 @@
 {
 	"installed_packages":
 	[
+		"All Autocomplete",
 		"CoffeeScript",
 		"FileDiffs",
+		"RubyTest",
 		"Sass",
 		"SideBarEnhancements"
 	]
