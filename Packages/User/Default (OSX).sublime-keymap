@@ -2,6 +2,10 @@
   // Custom commands
   { "keys": ["super+alt+w"], "command": "close_other_tabs" },
 
+  { "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser"} },
+  { "keys": ["ctrl+shift+d"], "command": "file_diff_menu" },
+  { "keys": ["ctrl+shift+7"], "command": "change_quotes"},
+
   // Embedded commands
   { "keys": ["ctrl+shift+super+r"], "command": "reveal_in_side_bar"},
 
@@ -14,4 +18,10 @@
       { "key": "setting.tab_completion", "operator": "equal", "operand": true }
     ]
   },
+
+  // bring back slurp_replace_string keymap
+  { "keys": ["super+shift+y"], "command": "run_last_ruby_test" },
+  { "keys": ["alt+shift+s"], "command": "run_single_ruby_test" },
+  { "keys": ["super+shift+e"], "command": "slurp_replace_string" },
+
 ]
