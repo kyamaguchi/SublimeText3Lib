@@ -2,9 +2,11 @@
 	"installed_packages":
 	[
 		"All Autocomplete",
+		"ChangeQuotes",
 		"CoffeeScript",
 		"FileDiffs",
 		"GitGutter",
+		"Markdown Preview",
 		"RubyTest",
 		"Sass",
 		"SideBarEnhancements"
