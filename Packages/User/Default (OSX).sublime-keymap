@@ -1,6 +1,7 @@
 [
   // Custom commands
   { "keys": ["super+alt+w"], "command": "close_other_tabs" },
+  { "keys": ["super+shift+t"], "command": "open_recent_file", "args": {"index" : 0} },
 
   { "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser"} },
   { "keys": ["ctrl+shift+d"], "command": "file_diff_menu" },
