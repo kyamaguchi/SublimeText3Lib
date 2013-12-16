@@ -2,8 +2,10 @@
 	"installed_packages":
 	[
 		"All Autocomplete",
+		"Case Conversion",
 		"ChangeQuotes",
 		"CoffeeScript",
+		"DashDoc",
 		"FileDiffs",
 		"GitGutter",
 		"Markdown Preview",
@@ -13,6 +15,7 @@
 		"RubyTest",
 		"Sass",
 		"SideBarEnhancements",
+		"Sublime-KnockoutJS-Snippets",
 		"TrailingSpaces"
 	]
 }
