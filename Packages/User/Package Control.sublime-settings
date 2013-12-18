@@ -2,6 +2,8 @@
 	"installed_packages":
 	[
 		"All Autocomplete",
+		"AngularJS",
+		"AngularJS Snippets",
 		"ChangeQuotes",
 		"CoffeeScript",
 		"FileDiffs",
