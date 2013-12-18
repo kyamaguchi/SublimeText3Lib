@@ -15,7 +15,7 @@
     "font_size": 10,
 
     // Valid options are "no_bold", "no_italic", "no_antialias", "gray_antialias",
-    // "subpixel_antialias", "no_round" (OS X only), "gdi" (Windows only) and
+    // "subpixel_antialias", "no_round" (OS X only), "GDI" (Windows only) and
     // "directwrite" (Windows only)
     "font_options": [],
 
@@ -105,13 +105,8 @@
     // If enabled, will highlight any line with a caret
     "highlight_line": false,
 
-    // Valid values are "smooth", "phase", "blink" and "solid".
+    // Valid values are "smooth", "phase", "blink", "wide" and "solid".
     "caret_style": "smooth",
-
-    // These settings control the size of the caret
-    "caret_extra_top": 0,
-    "caret_extra_bottom": 0,
-    "caret_extra_width": 0,
 
     // Set to false to disable underlining the brackets surrounding the caret
     "match_brackets": true,
@@ -302,15 +297,6 @@
     // Valid values are "system", "enabled" and "disabled"
     "overlay_scroll_bars": "system",
 
-    // Allows tabs to scroll left and right, instead of simply shrinking
-    "enable_tab_scrolling": true,
-
-    // Display file encoding in the status bar
-    "show_encoding": false,
-
-    // Display line endings in the status bar
-    "show_line_endings": false,
-
     //
     // Application Behavior Settings
     //
@@ -373,15 +359,12 @@
     // their symbols. This is required for Goto Definition to work.
     "index_files": true,
 
-    // index_exclude_patterns indicate which files won't be indexed.
-    "index_exclude_patterns": ["*.log"],
-
     // When enabled, anonymised usage data is sent back, assisting Sublime HQ
     // in making informed decisions about improving Sublime Text. File names
     // and file contents are never included, but data such as computer
     // specifications, startup time, installed packages, and edited file types
     // are. When disabled, telemetry is neither recorded or sent.
-    // A setting of auto will enable telemetry in dev builds, and disable
+    // A setting of auto will enable telementry in dev builds, and disable
     // telemetry in regular builds.
     "enable_telemetry": "auto",
 
