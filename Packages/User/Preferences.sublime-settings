@@ -48,5 +48,8 @@
 	"save_on_focus_lost": true,
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true
+	"trim_trailing_white_space_on_save": true,
+	"enable_tab_scrolling": true,
+	"show_encoding": true,
+	"show_line_endings": true
 }
