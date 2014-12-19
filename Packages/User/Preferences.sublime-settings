@@ -31,6 +31,7 @@
 		".git",
 		".bundle"
 	],
+	"binary_file_patterns": ["vcr_cassettes/*.yml", "*.min.js"],
 	"font_size": 12.0,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
