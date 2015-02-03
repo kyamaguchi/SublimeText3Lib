@@ -1,6 +1,10 @@
 {
 	"auto_complete": false,
 	"auto_complete_commit_on_tab": true,
+	"binary_file_patterns":
+	[
+		"*.min.js"
+	],
 	"bold_folder_labels": true,
 	"color_scheme": "Packages/User/RailsCastsColorScheme.tmTheme",
 	"copy_with_empty_selection": false,
@@ -37,6 +41,7 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"TrailingSpaces",
 		"Vintage"
 	],
 	"indent_guide_options":
